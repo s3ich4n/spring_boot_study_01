@@ -24,7 +24,12 @@ dependencies {
 	testImplementation("junit:junit:4.13.2")
 
 	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+	// https://projectlombok.org/setup/gradle
 	compileOnly("org.projectlombok:lombok:1.18.32")
+	annotationProcessor("org.projectlombok:lombok:1.18.32")
+
+	testCompileOnly("org.projectlombok:lombok:1.18.32")
+	testAnnotationProcessor("org.projectlombok:lombok:1.18.32")
 }
 
 tasks.withType<Test> {
