@@ -1,10 +1,11 @@
 package com.s3ich4n.example.s3ich4nspringbootstudy01.web;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.is;
@@ -18,7 +19,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
  * JUnit 에 내장된 실행자 외에 다른 실행자를 실행시킴.
  * WebMvc 중점으로 테스트함. Controller 테스트를 위함
  */
-@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
 @WebMvcTest(controllers = HelloController.class)
 public class HelloControllerTest {
 
@@ -27,6 +28,7 @@ public class HelloControllerTest {
     private MockMvc mvc;
 
     @Test
+    @DisplayName("Hello 리턴 확인하기")
     public void hello_리턴() throws Exception {
         String hello = "Hello World";
 
@@ -36,6 +38,7 @@ public class HelloControllerTest {
     }
 
     @Test
+    @DisplayName("Hello DTO 리턴 확인하기")
     public void helloDto_리턴() throws Exception {
         String name = "hello";
         int amount = 42;
