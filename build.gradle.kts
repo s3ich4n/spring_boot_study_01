@@ -31,8 +31,10 @@ dependencies {
 	annotationProcessor("org.projectlombok:lombok:1.18.32")
 	testCompileOnly("org.projectlombok:lombok:1.18.32")
 	testAnnotationProcessor("org.projectlombok:lombok:1.18.32")
-
 	runtimeOnly("com.h2database:h2")
+
+	// testing
+	testImplementation("org.assertj:assertj-core:3.25.1")
 }
 
 tasks.withType<Test> {
