@@ -1,6 +1,6 @@
 plugins {
 	java
-	id("org.springframework.boot") version "3.2.4"
+	id("org.springframework.boot") version "3.2.5"
 	id("io.spring.dependency-management") version "1.1.4"
 	id("com.diffplug.spotless") version "6.25.0"
 }
@@ -9,7 +9,8 @@ group = "com.s3ich4n.example"
 version = "0.0.1-SNAPSHOT"
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_17
+	sourceCompatibility = JavaVersion.VERSION_21
+	toolchain { languageVersion = JavaLanguageVersion.of(21) }
 }
 
 repositories {
@@ -35,6 +36,9 @@ dependencies {
 
 	// testing
 	testImplementation("org.assertj:assertj-core:3.25.1")
+
+	// actuator
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
 }
 
 tasks.withType<Test> {
