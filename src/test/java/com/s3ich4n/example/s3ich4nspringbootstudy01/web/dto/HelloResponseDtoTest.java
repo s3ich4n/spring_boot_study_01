@@ -1,9 +1,9 @@
 package com.s3ich4n.example.s3ich4nspringbootstudy01.web.dto;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class HelloResponseDtoTest {
 

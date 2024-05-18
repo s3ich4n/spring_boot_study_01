@@ -1,7 +1,6 @@
 package com.s3ich4n.example.s3ich4nspringbootstudy01.web.dto;
 
 import com.s3ich4n.example.s3ich4nspringbootstudy01.domain.Posts;
-
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,10 +20,6 @@ public class PostsSaveRequestDto {
     }
 
     public Posts toEntity() {
-        return Posts.builder()
-                .title(title)
-                .content(content)
-                .author(author)
-                .build();
+        return Posts.builder().title(title).content(content).author(author).build();
     }
 }
