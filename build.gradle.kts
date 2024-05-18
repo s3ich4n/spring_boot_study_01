@@ -39,6 +39,9 @@ dependencies {
 
 	// actuator
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+	// render
+	implementation("org.springframework.boot:spring-boot-starter-mustache:3.2.5")
 }
 
 tasks.withType<Test> {
