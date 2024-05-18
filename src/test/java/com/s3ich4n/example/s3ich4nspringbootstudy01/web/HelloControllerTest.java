@@ -8,14 +8,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
 /** JUnit 에 내장된 실행자 외에 다른 실행자를 실행시킴. WebMvc 중점으로 테스트함. Controller 테스트를 위함 */
-@ExtendWith(SpringExtension.class)
 @WebMvcTest(controllers = HelloController.class)
 public class HelloControllerTest {
 
