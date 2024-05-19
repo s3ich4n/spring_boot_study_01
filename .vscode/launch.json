@@ -2,11 +2,11 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Spring Boot-S3ich4nSpringbootStudy01Application<spring_boot_study_01>",
+            "name": "Spring Boot-S3ich4nSpringbootStudy01Application<s3ich4n-springboot-study-01>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.s3ich4n.example.s3ich4nspringbootstudy01.S3ich4nSpringbootStudy01Application",
-            "projectName": "spring_boot_study_01",
+            "projectName": "s3ich4n-springboot-study-01",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
