@@ -2,12 +2,15 @@ package com.s3ich4n.example.s3ich4nspringbootstudy01.service.posts;
 
 import com.s3ich4n.example.s3ich4nspringbootstudy01.domain.Posts;
 import com.s3ich4n.example.s3ich4nspringbootstudy01.domain.PostsRepository;
+import com.s3ich4n.example.s3ich4nspringbootstudy01.web.dto.PostsListResponseDto;
 import com.s3ich4n.example.s3ich4nspringbootstudy01.web.dto.PostsResponseDto;
 import com.s3ich4n.example.s3ich4nspringbootstudy01.web.dto.PostsSaveRequestDto;
 import com.s3ich4n.example.s3ich4nspringbootstudy01.web.dto.PostsUpdateRequestDto;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * 1. Bean을 주입받는 여러 방식 중, 생성자로 주입받는 방식이 가장 권장됨. 이를 위해 아래의 RequiredArgsConstructor 어노테이션을 사용함. 2. 쿼리를
@@ -42,5 +45,12 @@ public class PostsService {
                         .orElseThrow(() -> new IllegalArgumentException("게시글이 없습니다. id=" + id));
 
         return new PostsResponseDto(entity);
+    }
+
+    @Transactional
+    public List<PostsListResponseDto> findAllDesc() {
+        return postsRepository.findAllDesc().stream()
+                            .map(PostsListResponseDto::new)
+                            .toList();
     }
 }
