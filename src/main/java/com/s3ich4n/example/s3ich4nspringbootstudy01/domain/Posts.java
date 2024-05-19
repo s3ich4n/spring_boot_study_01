@@ -1,5 +1,7 @@
 package com.s3ich4n.example.s3ich4nspringbootstudy01.domain;
 
+import com.s3ich4n.example.s3ich4nspringbootstudy01.domain.BaseTimeEntity;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
