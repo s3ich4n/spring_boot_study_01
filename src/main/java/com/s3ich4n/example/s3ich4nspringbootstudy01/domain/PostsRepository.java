@@ -1,6 +1,9 @@
 package com.s3ich4n.example.s3ich4nspringbootstudy01.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import java.util.List;
 
 /**
  * @s
@@ -11,4 +14,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
  *     <p>그리고 SQLAlchemy 처럼 insert 후에 .flush() 나 .add() 를 자체적으로 콜함으로인해, ORM 객체의 값이 영속 저장소에 알아서 반영되는
  *     개념을 Dirty checking이라고 하는 것으로 보인다.
  */
-public interface PostsRepository extends JpaRepository<Posts, Long> {}
+public interface PostsRepository extends JpaRepository<Posts, Long> {
+
+    @Query("SELECT p FROM Posts p order by p.id DESC")
+    List<Posts> findAllDesc();
+}
