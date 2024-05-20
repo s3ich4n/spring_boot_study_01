@@ -1,9 +1,8 @@
 package com.s3ich4n.example.s3ich4nspringbootstudy01.domain;
 
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
-import java.util.List;
 
 /**
  * @s
