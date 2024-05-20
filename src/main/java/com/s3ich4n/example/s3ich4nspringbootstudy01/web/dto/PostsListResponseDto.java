@@ -1,9 +1,8 @@
 package com.s3ich4n.example.s3ich4nspringbootstudy01.web.dto;
 
 import com.s3ich4n.example.s3ich4nspringbootstudy01.domain.Posts;
-
-import lombok.Getter;
 import java.time.LocalDateTime;
+import lombok.Getter;
 
 @Getter
 public class PostsListResponseDto {

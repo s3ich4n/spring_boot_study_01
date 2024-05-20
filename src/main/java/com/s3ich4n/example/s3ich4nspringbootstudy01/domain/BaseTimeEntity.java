@@ -2,7 +2,6 @@ package com.s3ich4n.example.s3ich4nspringbootstudy01.domain;
 
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.MappedSuperclass;
-
 import java.time.LocalDateTime;
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;

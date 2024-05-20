@@ -10,10 +10,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.jpa.mapping.JpaMetamodelMappingContext;
 import org.springframework.test.web.servlet.MockMvc;
 
 /** JUnit 에 내장된 실행자 외에 다른 실행자를 실행시킴. WebMvc 중점으로 테스트함. Controller 테스트를 위함 */
-@WebMvcTest(controllers = HelloController.class)
+@WebMvcTest(HelloController.class)
+@MockBean(JpaMetamodelMappingContext.class)
 public class HelloControllerTest {
 
     // 스프링이 관리하는 Bean을 주입받음
